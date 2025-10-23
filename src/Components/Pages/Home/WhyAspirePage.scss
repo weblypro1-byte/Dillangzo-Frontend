@@ -1,0 +1,520 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .why-aspire-page {
+//   width: 100%;
+//   overflow-x: hidden; // 🔥 prevent any horizontal scroll
+//   padding: 80px 8%;
+//   font-family: "Poppins", sans-serif;
+//   background: #fff;
+//   color: #333;
+//   box-sizing: border-box;
+
+//   .content {
+//     display: grid;
+//     grid-template-columns: 1.3fr 0.5fr 1fr;
+//     align-items: start;
+//     gap: 40px;
+//     max-width: 1300px; // ✅ keeps layout centered and contained
+//     margin: 0 auto;
+//     position: relative;
+
+//     @media (max-width: 1200px) {
+//       grid-template-columns: 1.2fr 0.4fr 1fr;
+//       gap: 30px;
+//     }
+
+//     @media (max-width: 992px) {
+//       grid-template-columns: 1fr;
+//       text-align: center;
+//       gap: 50px;
+//       padding: 0 20px;
+//     }
+
+//     .text-side {
+//       .section-title {
+//         font-weight: 700;
+//         font-size: 20px;
+//         margin-bottom: 15px;
+//       }
+
+//       .main-heading {
+//         font-size: 46px;
+//         line-height: 1.1;
+//         font-weight: 800;
+//         margin-bottom: 25px;
+
+//         .gold {
+//           color: #e4b543;
+//         }
+//         .red {
+//           color: #c21b1b;
+//         }
+
+//         @media (max-width: 768px) {
+//           font-size: 34px;
+//         }
+//       }
+
+//       .description {
+//         color: #666;
+//         font-size: 16px;
+//         line-height: 1.8;
+//         max-width: 600px;
+//         margin: 0 auto; // ✅ centers text block on small screens
+//       }
+//     }
+
+//     .ribbon-section {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       overflow: hidden;
+
+//       @media (max-width: 992px) {
+//         display: none;
+//       }
+
+//       .ribbon {
+//         background: #e4b543;
+//         color: #fff;
+//         padding: 14px 26px;
+//         border-radius: 3px;
+//         display: inline-flex;
+//         align-items: center;
+//         font-weight: 600;
+//         position: relative;
+//         font-size: 15px;
+//         white-space: nowrap;
+
+//         .icon {
+//           margin-right: 10px;
+//         }
+
+//         &::after {
+//           content: "";
+//           position: absolute;
+//           right: -14px;
+//           top: 50%;
+//           transform: translateY(-50%);
+//           border-left: 14px solid #e4b543;
+//           border-top: 10px solid transparent;
+//           border-bottom: 10px solid transparent;
+//         }
+//       }
+//     }
+
+//     .image-side {
+//       display: flex;
+//       justify-content: center;
+
+//       .card {
+//         max-width: 360px;
+//         border-radius: 10px;
+//         box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+//         overflow: hidden;
+//         background: #fff;
+//         transition: 0.4s ease;
+//         position: relative;
+
+//         &:hover {
+//           transform: translateY(-8px);
+//           box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+//         }
+
+//         img {
+//           width: 100%;
+//           height: auto;
+//           display: block;
+//           transition: 0.5s ease;
+//           object-fit: cover; // ✅ prevents image overflow/stretching
+//         }
+
+//         &:hover img {
+//           transform: scale(1.07);
+//         }
+
+//         p {
+//           padding: 20px;
+//           font-size: 15px;
+//           color: #555;
+//           line-height: 1.7;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+// .why-aspire-page {
+//   width: 100%;
+//   overflow-x: hidden; // ✅ prevents page from moving left/right
+//   margin: 0;
+//   padding: 80px 8%;
+//   font-family: "Poppins", sans-serif;
+//   background: #fff;
+//   color: #333;
+//   box-sizing: border-box;
+
+//   .content {
+//     display: grid;
+//     grid-template-columns: 1.2fr 1fr;
+//     gap: 60px;
+//     align-items: center;
+//     max-width: 1300px;
+//     margin: 0 auto;
+//     position: relative;
+
+//     @media (max-width: 992px) {
+//       grid-template-columns: 1fr;
+//       text-align: center;
+//       gap: 50px;
+//       padding: 0 20px;
+//     }
+
+//     /* ---------- LEFT SIDE ---------- */
+//     .text-side {
+//       .section-title {
+//         font-weight: 700;
+//         font-size: 20px;
+//         color: #444;
+//         margin-bottom: 10px;
+//       }
+
+//       .main-heading {
+//         font-size: 46px;
+//         font-weight: 800;
+//         line-height: 1.1;
+//         margin-bottom: 20px;
+
+//         .gold {
+//           color: #e4b543;
+//         }
+//         .red {
+//           color: #c21b1b;
+//         }
+
+//         @media (max-width: 768px) {
+//           font-size: 34px;
+//         }
+//       }
+
+//       .description {
+//         color: #555;
+//         font-size: 16px;
+//         line-height: 1.7;
+//         max-width: 600px;
+//         margin-bottom: 40px;
+//       }
+
+//       .feature-boxes {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+//         gap: 20px;
+
+//         .feature-box {
+//           display: flex;
+//           align-items: center;
+//           gap: 10px;
+//           padding: 14px 18px;
+//           border: 1px solid #ddd;
+//           border-radius: 10px;
+//           background: #fafafa;
+//           font-weight: 600;
+//           cursor: pointer;
+//           transition: all 0.3s ease;
+//           text-align: left;
+
+//           &:hover {
+//             background: #e4b543;
+//             color: #fff;
+//             transform: translateY(-4px);
+//           }
+
+//           &.active {
+//             background: #e4b543;
+//             color: #fff;
+//             border-color: #e4b543;
+//           }
+
+//           .icon {
+//             color: inherit;
+//             font-size: 18px;
+//           }
+//         }
+//       }
+//     }
+
+//     /* ---------- IMAGE SIDE ---------- */
+//     .image-side {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       overflow: hidden; // ✅ ensures animations stay inside
+
+//       .card {
+//         max-width: 400px;
+//         border-radius: 10px;
+//         overflow: hidden;
+//         background: #fff;
+//         box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+//         transition: 0.4s ease;
+//         animation: slideIn 0.6s ease;
+
+//         img {
+//           width: 100%;
+//           height: 250px;
+//           object-fit: cover;
+//           transition: transform 0.5s ease;
+//           display: block;
+//         }
+
+//         &:hover img {
+//           transform: scale(1.07);
+//         }
+
+//         p {
+//           padding: 20px;
+//           color: #555;
+//           font-size: 15px;
+//           line-height: 1.6;
+//         }
+//       }
+
+//       /* ✨ slide animation instead of fade */
+//       @keyframes slideIn {
+//         from {
+//           opacity: 0;
+//           transform: translateX(40px);
+//         }
+//         to {
+//           opacity: 1;
+//           transform: translateX(0);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// /* ✅ Global fix to stop page shifting */
+// html,
+// body {
+//   overflow-x: hidden;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+
+
+
+.why-aspire-page {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 50px 8%;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
+  color: #333;
+  box-sizing: border-box;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 50px;
+      padding: 0 20px;
+    }
+
+    /* ---------- LEFT SIDE ---------- */
+    .text-side {
+      .section-title {
+        font-weight: 700;
+        font-size: 20px;
+        color: #9e9e9e; // silver tone
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .main-heading {
+        font-size: 46px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 20px;
+
+        .gold {
+          color: #d4af37; // gold from logo
+        }
+        .red {
+          color: #333; // replaced red with dark grey for consistency
+        }
+
+        @media (max-width: 768px) {
+          font-size: 34px;
+        }
+      }
+
+      .description {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 600px;
+        margin-bottom: 40px;
+      }
+
+      .feature-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+
+        .feature-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 18px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          background: #fdfdfd;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-align: left;
+          color: #333;
+
+          &:hover {
+            background: #d4af37;
+            color: #fff;
+            border-color: #d4af37;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+          }
+
+          &.active {
+            background: #d4af37;
+            color: #fff;
+            border-color: #d4af37;
+          }
+
+          .icon {
+            font-size: 18px;
+            color: inherit;
+          }
+        }
+      }
+    }
+
+    /* ---------- IMAGE SIDE ---------- */
+    .image-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .card {
+        max-width: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: 0.4s ease;
+        animation: slideIn 0.6s ease;
+
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+          display: block;
+          border-bottom: 3px solid #d4af37;
+        }
+
+        &:hover img {
+          transform: scale(1.07);
+        }
+
+        p {
+          padding: 20px;
+          color: #555;
+          font-size: 15px;
+          line-height: 1.6;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+/* ✅ Prevent horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+}

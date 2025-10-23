@@ -1,0 +1,201 @@
+.chinese-course {
+  font-family: "Poppins", sans-serif;
+  padding: 60px 0;
+  background: #ffffff;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex: 1 1 65%;
+
+    .label {
+      background: rgba(240, 59, 59, 0.1);
+      color: #d4af37;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 15px 0 25px;
+      color: #222;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+
+      .instructor-avatar {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .instructor-info {
+        .name {
+          font-weight: 600;
+          color: #111;
+        }
+        .role {
+          display: block;
+          color: #777;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about {
+      h2 {
+        font-size: 1.5rem;
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.7;
+      }
+    }
+
+    .course-outline {
+      margin-top: 40px;
+
+      h2 {
+        color: #d4af37;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .accordion-item {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        .accordion-header {
+          background: #fafafa;
+          border: none;
+          width: 100%;
+          font-size: 1.1rem;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: #222;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #f1f1f1;
+          }
+        }
+
+        .accordion-content {
+          padding: 12px 16px;
+          color: #555;
+          line-height: 1.6;
+        }
+
+        &.active {
+          border-color: #d4af37;
+
+          .accordion-header {
+            color: #d4af37;
+            background: rgba(240, 59, 59, 0.05);
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1 1 30%;
+
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+      .video-wrap video {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-body {
+        padding: 20px;
+
+        .details {
+          list-style: none;
+          padding: 0;
+          margin-bottom: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            margin-bottom: 10px;
+
+            svg {
+              color: #d4af37;
+            }
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: #d4af37;
+          color: #fff;
+          font-weight: 600;
+          border: none;
+          padding: 12px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #d4af37;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+}

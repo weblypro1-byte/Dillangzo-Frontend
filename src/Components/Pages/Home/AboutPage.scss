@@ -1,0 +1,211 @@
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.about-page {
+  background: #f4f4f4; /* light metallic gray background */
+  font-family: "Poppins", sans-serif;
+  padding: 80px 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+    gap: 40px;
+
+    /* LEFT CONTENT */
+    .about-content {
+      flex: 1;
+      padding-right: 40px;
+
+      .about-subtitle {
+        color: #3a3a3a;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+
+      .about-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 10px 0 25px 0;
+        line-height: 1.3;
+
+        .highlight-red {
+          color: #a0a0a0; /* soft metallic gray replacing red */
+        }
+
+        .highlight-yellow {
+          color: #d4af37; /* classic gold */
+        }
+      }
+
+      p {
+        color: #222;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      .read-more-btn {
+        background: linear-gradient(90deg, #d4af37, #f9d976); /* gold gradient */
+        color: #fff;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 3px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(90deg, #b99828, #e4c464);
+          transform: translateY(-3px);
+          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+      }
+    }
+
+    /* RIGHT IMAGE SECTION */
+    .about-image-section {
+      position: relative;
+      flex: 1.1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .image-frame {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -20px;
+          top: 30px;
+          width: 95%;
+          height: 95%;
+          border-left: 20px solid #342c2cbe; /* metallic silver */
+          border-bottom: 20px solid #a0a0a0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          position: relative;
+          z-index: 2;
+          border-radius: 3px;
+          filter: grayscale(20%);
+          transition: all 0.4s ease;
+
+          &:hover {
+            filter: grayscale(0);
+            transform: scale(1.02);
+          }
+        }
+      }
+
+      .founded-card {
+        position: absolute;
+        right: 10px;
+        bottom: -35px;
+        background: #fff;
+        padding: 25px 45px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+        z-index: 3;
+
+        .icon {
+          font-size: 2rem;
+          color: #d4af37; /* gold */
+        }
+
+        .founded-text {
+          font-weight: 700;
+          color: #3a3a3a;
+          margin-top: 8px;
+        }
+
+        .founded-year {
+          color: #d4af37; /* gold accent */
+          font-weight: 700;
+          font-size: 2rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /* ✅ MOBILE RESPONSIVE (≤ 568px) */
+  @media (max-width: 568px) {
+    padding: 60px 5%;
+
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+
+      .about-content {
+        padding-right: 0;
+
+        .about-title {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+
+        .read-more-btn {
+          padding: 12px 28px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .about-image-section {
+        width: 100%;
+        justify-content: center;
+
+        .image-frame {
+          max-width: 100%;
+
+          &::before {
+            border-left: 12px solid #a0a0a0;
+            border-bottom: 12px solid #a0a0a0;
+            left: -10px;
+            top: 20px;
+          }
+        }
+
+        .founded-card {
+          position: static;
+          margin-top: 60px;
+          padding: 0px 35px;
+
+          .founded-year {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

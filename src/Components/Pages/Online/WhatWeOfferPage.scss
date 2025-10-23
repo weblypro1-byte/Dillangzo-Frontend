@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.what-we-offer-page {
+  font-family: "Playfair Display", serif;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+  overflow-x: hidden;
+
+  .section-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #d4af37;
+    margin-top: 15px;
+    border-radius: 2px;
+  }
+}
+
+
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .offer-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-box {
+      font-size: 40px;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b2b2b;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+    }
+  }
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 36px;
+    }
+
+    .offer-card {
+      padding: 30px 20px;
+
+      .icon-box {
+        font-size: 34px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}

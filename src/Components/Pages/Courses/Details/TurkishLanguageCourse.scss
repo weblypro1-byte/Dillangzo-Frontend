@@ -1,0 +1,179 @@
+.turkish-course {
+  font-family: "Poppins", sans-serif;
+  padding: 60px 0;
+  background: #fff;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex: 1 1 65%;
+
+    .label {
+      color: #d4af37;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 10px 0 25px;
+      color: #222;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+
+      .instructor-avatar {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .instructor-info {
+        .name {
+          font-weight: 600;
+          color: #111;
+        }
+        .role {
+          display: block;
+          color: #777;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      h2 {
+        font-size: 1.5rem;
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.7;
+      }
+    }
+
+    .course-outline {
+      margin-top: 40px;
+
+      .accordion-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+
+        .accordion-header {
+          background: none;
+          border: none;
+          width: 100%;
+          font-size: 1.1rem;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: #222;
+          cursor: pointer;
+          padding: 10px 0;
+        }
+
+        .accordion-content {
+          padding: 10px 0;
+          color: #555;
+          line-height: 1.6;
+        }
+
+        &.active .accordion-header {
+          color: #d4af37;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1 1 30%;
+
+    .card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+      .video-wrap video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-body {
+        padding: 20px;
+
+        .details {
+          list-style: none;
+          padding: 0;
+          margin-bottom: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #444;
+            margin-bottom: 10px;
+
+            svg {
+              color: #d4af37;
+            }
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: #d4af37;
+          color: #fff;
+          font-weight: 600;
+          border: none;
+          padding: 12px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #d4af37;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+}

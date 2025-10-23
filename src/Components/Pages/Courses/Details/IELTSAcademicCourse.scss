@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+$brand: #0b2b4a;
+$accent: #d4af37;
+$muted: #6b7280;
+$bg: #ffffff;
+
+.pte-academic-course {
+  font-family: "Poppins", sans-serif;
+  background: #f9fafc;
+  padding: 70px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 50px;
+    align-items: flex-start;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==== LEFT CONTENT ==== */
+  .content {
+    .label {
+      display: inline-block;
+      background: rgba($accent, 0.1);
+      color: $accent;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 34px;
+      color: $brand;
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+
+      .instructor-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 6px 15px rgba($accent, 0.25);
+      }
+
+      .instructor-info {
+        display: flex;
+        flex-direction: column;
+        .name {
+          font-weight: 600;
+          color: $brand;
+        }
+        .role {
+          font-size: 13px;
+          color: $muted;
+        }
+      }
+    }
+
+    .hero-image {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    .about {
+      background: $bg;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 35px rgba($accent, 0.1);
+      }
+
+      h2 {
+        font-size: 22px;
+        color: $brand;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 17px;
+        margin-top: 22px;
+        color: $brand;
+        font-weight: 600;
+      }
+
+      p {
+        color: $muted;
+        font-size: 15.5px;
+        line-height: 1.8;
+        margin-top: 10px;
+      }
+    }
+
+    /* ==== COURSE OUTLINE ==== */
+    .course-outline {
+      margin-top: 40px;
+      background: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 10px 30px rgba($accent, 0.1);
+      }
+
+      h2 {
+        font-size: 22px;
+        color: $brand;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .accordion-item {
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        .accordion-header {
+          width: 100%;
+          text-align: left;
+          background: #f9fafb;
+          color: $brand;
+          font-weight: 600;
+          padding: 14px 18px;
+          border: none;
+          font-size: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #eef2f6;
+          }
+
+          svg {
+            color: $accent;
+            font-size: 16px;
+            transition: transform 0.3s;
+          }
+        }
+
+        .accordion-content {
+          background: #fff;
+          padding: 16px 18px;
+          border-top: 1px solid #e5e7eb;
+
+          p {
+            margin: 0;
+            color: $muted;
+            font-size: 15px;
+            line-height: 1.7;
+          }
+        }
+
+        &.active {
+          border-color: $accent;
+
+          .accordion-header {
+            background: rgba($accent, 0.08);
+          }
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  /* ==== SIDEBAR ==== */
+  .sidebar {
+    .card {
+      background: $bg;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11, 43, 74, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 35px rgba($accent, 0.15);
+      }
+
+      .video-wrap {
+        height: 210px;
+        background: #000;
+
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-body {
+        padding: 22px;
+
+        .details {
+          list-style: none;
+          margin: 0 0 22px;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            color: $brand;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(11, 43, 74, 0.08);
+
+            span {
+              font-weight: 600;
+              margin-right: 6px;
+            }
+
+            svg {
+              color: $accent;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: linear-gradient(90deg, $accent, darken($accent, 6%));
+          color: #fff;
+          padding: 14px 18px;
+          border: none;
+          border-radius: 8px;
+          font-weight: 700;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 8px 20px rgba($accent, 0.25);
+
+          &:hover {
+            background: #0b2b4a; // dark hover only
+            box-shadow: 0 12px 25px rgba(11, 43, 74, 0.3);
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}

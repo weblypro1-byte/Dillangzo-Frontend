@@ -1,0 +1,194 @@
+.german-language-course {
+  font-family: "Poppins", sans-serif;
+  padding: 80px 0;
+  background: #fafafa;
+
+  .container {
+    display: flex;
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    flex: 2;
+
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000; // Black from flag
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      margin: 10px 0 20px;
+      color: #000;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .instructor-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .name {
+        font-weight: 600;
+        color: #000;
+      }
+
+      .role {
+        font-size: 13px;
+        color: #777;
+      }
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #000;
+      }
+
+      p {
+        margin-bottom: 15px;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-top: 25px;
+        color: #d4af37; // Red accent
+      }
+    }
+
+    .course-outline {
+      margin-top: 40px;
+
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #000;
+      }
+
+      .accordion-item {
+        background: #fff;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        .accordion-header {
+          width: 100%;
+          background: #fff7e0; // Light gold tint
+          padding: 15px 20px;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          font-size: 16px;
+          border: none;
+          color: #000;
+
+          &:hover {
+            background: #ffeb99; // brighter gold hover
+          }
+        }
+
+        .accordion-content {
+          padding: 15px 20px;
+          background: white;
+          color: #444;
+        }
+
+        &.active {
+          border-left: 4px solid #d32f2f; // red stripe accent
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1;
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+      .video-wrap video {
+        width: 100%;
+        display: block;
+      }
+
+      .card-body {
+        padding: 20px;
+
+        .details {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 15px;
+            color: #333;
+
+            svg {
+              color: #d4af37; // red icons
+            }
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: #d4af37; // German flag gradient
+          color: white;
+          border: none;
+          padding: 12px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+}

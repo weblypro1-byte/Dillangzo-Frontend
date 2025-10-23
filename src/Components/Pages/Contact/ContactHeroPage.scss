@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+.contact-hero-page {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://www.apple.com/careers/images/teams/customer/gallery-large/default.jpg")
+      center/cover no-repeat;
+  font-family: "Playfair Display", serif;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+
+  /* ✨ Metallic gold–silver overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(180, 180, 180, 0.25),
+      rgba(255, 215, 0, 0.2)
+    );
+    z-index: 1;
+  }
+
+  /* 🏆 Hero content */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding-bottom: 10px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 20px;
+      margin-top: 12px;
+      opacity: 0;
+      animation: fadeInText 1.5s ease forwards 0.8s;
+    }
+  }
+
+  /* === Animations === */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* === Responsive === */
+  @media (max-width: 992px) {
+    height: 50vh;
+
+    .hero-content h1 {
+      font-size: 42px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 40vh;
+
+    .hero-content h1 {
+      font-size: 32px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+    }
+  }
+}

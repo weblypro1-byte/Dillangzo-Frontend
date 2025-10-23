@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+$brand: #0b2b4a;
+$accent: #d4af37;
+$muted: #6b7280;
+$bg: #ffffff;
+
+.toefl-preparation-course {
+  font-family: "Poppins", sans-serif;
+  background: #f9fafc;
+  padding: 60px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .content {
+    .label {
+      display: inline-block;
+      background: rgba($accent, 0.1);
+      color: $accent;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 32px;
+      color: $brand;
+      font-weight: 700;
+      margin: 6px 0 14px;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+
+      .instructor-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .instructor-info {
+        .name {
+          font-weight: 600;
+          color: $brand;
+        }
+        .role {
+          font-size: 13px;
+          color: $muted;
+        }
+      }
+    }
+
+    .hero-image {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .about {
+      background: $bg;
+      padding: 28px;
+      border-radius: 10px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+
+      h2 {
+        font-size: 22px;
+        color: $brand;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 17px;
+        margin-top: 20px;
+        color: $brand;
+        font-weight: 600;
+      }
+
+      p {
+        color: $muted;
+        font-size: 15.5px;
+        line-height: 1.8;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .sidebar {
+    position: relative;
+    animation: fadeInUp 0.6s ease both;
+
+    .card {
+      background: $bg;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11, 43, 74, 0.1);
+      transition: all 0.3s ease;
+
+      .video-wrap {
+        height: 210px;
+        background: #000;
+
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-body {
+        padding: 20px;
+
+        .details {
+          list-style: none;
+          margin: 0 0 22px;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            color: $brand;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(11, 43, 74, 0.08);
+
+            span {
+              font-weight: 600;
+              margin-right: 6px;
+            }
+
+            svg {
+              color: $accent;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: linear-gradient(90deg, $accent, darken($accent, 6%));
+          color: #fff;
+          padding: 14px 18px;
+          border: none;
+          border-radius: 8px;
+          font-weight: 700;
+          font-size: 16px;
+          cursor: pointer;
+          transition: transform 0.3s, box-shadow 0.3s;
+          box-shadow: 0 8px 20px rgba($accent, 0.25);
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba($accent, 0.3);
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      margin-top: 30px;
+    }
+  }
+}

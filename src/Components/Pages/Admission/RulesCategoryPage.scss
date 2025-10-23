@@ -1,0 +1,81 @@
+.rules-category-page {
+  background-color: #f2f2f2;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rules-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .rule-card {
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 350px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon {
+      font-size: 50px;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 15px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .rule-card.red {
+    background-color: #c62828; // deep red
+  }
+
+  .rule-card.yellow {
+    background-color: #fbc02d; // golden yellow
+    color: #333;
+
+    .icon {
+      color: #c62828;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    h3 {
+      color: #333;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rules-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rule-card {
+      max-width: 90%;
+    }
+  }
+}

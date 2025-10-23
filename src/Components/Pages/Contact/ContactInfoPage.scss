@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.contact-info-page {
+  background: #f8f8f8;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+    height: auto;
+
+
+  // ===== Top Info Boxes =====
+  .info-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    text-align: center;
+
+    .info-card {
+      background: #fff;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      flex: 1 1 300px;
+      max-width: 350px;
+      padding: 35px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background: #d4af37;
+        color: #fff;
+        font-size: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+      }
+
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #000;
+      }
+
+      p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // ===== Bottom Form Section =====
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #f2f2f2;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+    .contact-form {
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px 35px;
+      flex: 1 1 450px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 25px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        .row {
+          display: flex;
+          gap: 15px;
+
+          input {
+            flex: 1;
+          }
+        }
+
+        input,
+        textarea {
+          padding: 12px 14px;
+          border: 2px solid #d4af37;
+          border-radius: 5px;
+          font-size: 15px;
+          outline: none;
+          transition: 0.3s;
+
+          &:focus {
+            border-color: #d4af37;
+          }
+        }
+
+        textarea {
+          resize: none;
+          height: 120px;
+        }
+
+        button {
+          background: #d4af37;
+          color: #fff;
+          font-weight: 600;
+          padding: 12px 25px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background: #d4af37;
+          }
+        }
+      }
+    }
+
+    .contact-image {
+      flex: 1 1 450px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+
+      img {
+        width: 750px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.6s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: #d4af37;
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+
+  // ===== Responsive =====
+  // ===== Responsive =====
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+
+    .contact-image {
+      order: -1;
+      width: 90%;
+      max-width: 480px;
+      height: 320px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 30px;
+      padding: 30px 25px;
+
+      form {
+        input,
+        textarea {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .info-section {
+    width: 350px;
+    padding-left: 15px;
+    gap: 15px;
+  }
+
+  .contact-container {
+    padding: 10px;
+
+    .contact-image {
+      width: 350px;
+      height: 260px;
+      padding: 10px 0px;
+      padding-left: -200px;
+    }
+
+    .contact-form {
+      width: 310px;
+     padding-top: 25px;
+padding-right: 20px;
+padding-bottom: 25px;
+padding-left: 20px;
+
+    }
+  }
+
+  .contact-form form .row {
+    flex-direction: column;
+  }
+}
+}

@@ -1,0 +1,660 @@
+// Variables
+// $primary-color: #d4af37;
+// $secondary-color: #ffffff;
+// $accent-color: #ff6b35;
+// $text-color: #333;
+// $border-color: #e0e0e0;
+// $error-color: #dc3545;
+// $success-color: #28a745;
+// $background-color: #ffffff;
+
+$primary-color: #cda434; // gold blend
+$secondary-color: #9e9e9e; // silver-gray
+$accent-color: #f5d97d; // soft gold highlight
+$text-color: #222222; // deep gray text
+$border-color: #e0e0e0; // light border
+$error-color: #d9534f; // soft red
+$success-color: #5cb85c; // soft green
+$background-color: #f9f9f9; // gentle light background
+
+
+
+
+
+
+
+
+
+
+
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 576px) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (max-width: 992px) { @content; }
+  }
+}
+
+// Base Styles
+.dillangzo-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'poppins';
+  background: $background-color;
+  min-height: 100vh;
+
+  @include responsive(tablet) {
+    padding: 15px;
+  }
+
+  @include responsive(phone) {
+    padding: 10px;
+  }
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+
+  h1 {
+    color: $primary-color;
+    margin: 0 0 10px 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, $primary-color, #c6b502);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include responsive(tablet) {
+      font-size: 2.3rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    color: $text-color;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    opacity: 0.8;
+
+    @include responsive(phone) {
+      font-size: 1.1rem;
+    }
+
+    &.academy-tagline {
+      color: $accent-color;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-top: 15px;
+      opacity: 1;
+    }
+  }
+}
+
+.academy-form {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  border: 1px solid #f8f9fa;
+
+  @include responsive(tablet) {
+    padding: 35px;
+  }
+
+  @include responsive(phone) {
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+}
+
+.form-section {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #f8f9fa;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-left: 5px solid $accent-color;
+    padding-left: 20px;
+    background: linear-gradient(135deg, $primary-color, #be9202);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include responsive(phone) {
+      font-size: 1.4rem;
+      padding-left: 15px;
+      border-left-width: 4px;
+    }
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @include responsive(phone) {
+    gap: 18px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  &.full-width {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $text-color;
+    font-size: 1rem;
+
+    @include responsive(phone) {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    &.languages-label {
+      font-size: 1.1rem;
+      color: $primary-color;
+    }
+  }
+
+  input, select, textarea {
+    padding: 15px 18px;
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+
+    @include responsive(phone) {
+      padding: 13px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 4px rgba($primary-color, 0.15);
+      transform: translateY(-2px);
+    }
+
+    &::placeholder {
+      color: #a0a0a0;
+    }
+  }
+
+  select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 12px;
+    appearance: none;
+  }
+}
+
+// Date Picker Styles
+.date-picker {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 4px rgba($primary-color, 0.15);
+  }
+}
+
+// Radio Groups
+.radio-group, .radio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radio-grid {
+  .radio-label {
+    flex: 0 0 calc(33.333% - 10px);
+
+    @include responsive(tablet) {
+      flex: 0 0 calc(50% - 10px);
+    }
+
+    @include responsive(phone) {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+.radio-label {
+  @include flex-center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 12px 15px;
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: white;
+
+  &:hover {
+    border-color: $primary-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  input[type="radio"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: $primary-color;
+  }
+
+  span {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  &:has(input:checked) {
+    border-color: $primary-color;
+    background: rgba($primary-color, 0.05);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.15);
+  }
+}
+
+// Languages Grid
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+
+  @include responsive(phone) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.language-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+
+  &:hover {
+    border-color: $primary-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: $primary-color;
+    margin: 0;
+  }
+
+  .language-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: $text-color;
+  }
+
+  &:has(input:checked) {
+    border-color: $primary-color;
+    background: rgba($primary-color, 0.08);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.1);
+    
+    .language-name {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+}
+
+// Buttons
+.submit-btn {
+  background: linear-gradient(135deg, $primary-color, #c69307);
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba($primary-color, 0.3);
+  text-transform: none;
+  margin-bottom: 15px;
+
+  @include responsive(phone) {
+    padding: 16px 30px;
+    font-size: 1.1rem;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba($primary-color, 0.4);
+    background: linear-gradient(135deg, #ecba05, $primary-color);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-note {
+  color: #666;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+// Responsive Design
+@media (max-width: 480px) {
+  .dillangzo-form-container {
+    padding: 5px;
+  }
+
+  .academy-form {
+    padding: 20px 15px;
+  }
+
+  .form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-grid .radio-label {
+    padding: 10px 12px;
+  }
+}
+
+// Focus styles for accessibility
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.date-picker:focus {
+  outline: none;
+}
+
+// Loading state
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+// Academy Contact Header
+.academy-contact-header {
+    background: linear-gradient(135deg, $primary-color, #1e4080);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px 10px 0 0;
+  
+    .academy-contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+  
+      @include responsive(tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+  
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+  
+        .contact-icon {
+          color: $accent-color;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+  
+        .contact-details {
+          display: flex;
+          flex-direction: column;
+  
+          strong {
+            font-size: 0.95rem;
+            font-weight: 600;
+          }
+  
+          span {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+  
+  // Update form header
+  .form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+  
+    h1 {
+      color: $primary-color;
+      margin: 0 0 10px 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+  
+      @include responsive(tablet) {
+        font-size: 1.8rem;
+      }
+  
+      @include responsive(phone) {
+        font-size: 1.6rem;
+      }
+    }
+  
+    p {
+      color: $text-color;
+      font-size: 1.1rem;
+      margin: 8px 0;
+      opacity: 0.8;
+  
+      @include responsive(phone) {
+        font-size: 1rem;
+      }
+  
+      &.academy-tagline {
+        color: $accent-color;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        opacity: 1;
+      }
+  
+      &.form-instruction {
+        font-style: italic;
+        font-weight: 500;
+        color: #666;
+        margin-top: 15px;
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 5px;
+        border-left: 3px solid $accent-color;
+      }
+    }
+  }
+  
+  // Block letters style
+  .block-letters {
+    font-family: 'poppins' !important;
+    // font-weight: bold !important;
+    // text-transform: uppercase !important;
+  }
+  
+  // Academy Footer
+  .academy-footer {
+    background: #f8f9fa;
+    padding: 25px;
+    text-align: center;
+    border-top: 2px solid $border-color;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+  
+    .footer-content {
+      h3 {
+        color: $primary-color;
+        margin: 0 0 15px 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+  
+      .footer-contact {
+        p {
+          margin: 8px 0;
+          font-size: 0.95rem;
+          color: $text-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+  
+          @include responsive(phone) {
+            flex-direction: column;
+            gap: 4px;
+          }
+  
+          .react-icons {
+            color: $primary-color;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+  
+  // Update responsive styles for contact header
+  @media (max-width: 768px) {
+    .academy-contact-header {
+      padding: 15px 20px;
+  
+      .academy-contact-info {
+        .contact-item {
+          .contact-details {
+            strong {
+              font-size: 0.9rem;
+            }
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .academy-contact-header {
+      padding: 12px 15px;
+  
+      .academy-contact-info {
+        gap: 12px;
+  
+        .contact-item {
+          gap: 8px;
+  
+          .contact-icon {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  
+    .academy-footer {
+      padding: 20px 15px;
+  
+      .footer-content {
+        h3 {
+          font-size: 1.1rem;
+        }
+  
+        .footer-contact p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }

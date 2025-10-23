@@ -1,0 +1,200 @@
+.french-language-course {
+  font-family: "Poppins", sans-serif;
+  padding: 80px 0;
+  background: #fdfdfd; // lighter white background
+
+  .container {
+    display: flex;
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    flex: 2;
+
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0055a4; // French blue
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      margin: 10px 0 20px;
+      color: #222;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .instructor-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .name {
+        font-weight: 600;
+        color: #0055a4;
+      }
+
+      .role {
+        font-size: 13px;
+        color: gray;
+      }
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border: 4px solid #ef4135; // red accent border
+    }
+
+    .about {
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #0055a4;
+      }
+
+      p {
+        margin-bottom: 15px;
+        color: #444;
+        line-height: 1.7;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-top: 25px;
+        color: #ef4135; // red accent heading
+      }
+    }
+
+    .course-outline {
+      margin-top: 40px;
+
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #0055a4;
+      }
+
+      .accordion-item {
+        background: #fff;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        .accordion-header {
+          width: 100%;
+          background: #f7f8fa;
+          padding: 15px 20px;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          font-size: 16px;
+          border: none;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #e8f0ff; // light blue hover
+          }
+
+          svg {
+            color: #0055a4;
+          }
+        }
+
+        .accordion-content {
+          padding: 15px 20px;
+          background: white;
+          color: #444;
+          border-left: 4px solid #ef4135; // red left line
+        }
+
+        &.active {
+          border-left: 4px solid #0055a4; // blue when open
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1;
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+      .video-wrap video {
+        width: 100%;
+        display: block;
+      }
+
+      .card-body {
+        padding: 20px;
+
+        .details {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 15px;
+            color: #333;
+
+            svg {
+              color: #0055a4;
+            }
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .enroll-btn {
+          width: 100%;
+          background: linear-gradient(90deg, #0055a4, #ef4135);
+          color: white;
+          border: none;
+          padding: 12px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background: linear-gradient(90deg, #ef4135, #0055a4);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+}

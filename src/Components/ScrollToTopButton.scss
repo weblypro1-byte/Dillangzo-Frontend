@@ -1,0 +1,54 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #dd0000, #ab0000);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+  animation: float-in 0.4s ease forwards;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: linear-gradient(135deg, #c9c4b7, #d4af37);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    opacity: 1;
+  }
+
+  svg {
+    animation: bounceArrow 1.8s infinite ease-in-out;
+  }
+}
+
+/* ✨ Fade & slide animation when appearing */
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Gentle up-down motion of the arrow */
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
