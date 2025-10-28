@@ -177,7 +177,8 @@ export default function Footer() {
           <h5>Contact With Us</h5>
           <ul>
             <li>
-              <FaPhoneAlt /> +92 325 8470098
+              <FaPhoneAlt />+92 325 840096
+
             </li>
             <li>
               <FaEnvelope /> dillanzo786@gmail.com

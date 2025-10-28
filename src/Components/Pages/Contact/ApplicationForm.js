@@ -125,20 +125,22 @@ const DillangzoAcademyForm = () => {
           <div className="contact-item">
             <FaMapMarkerAlt className="contact-icon" />
             <div className="contact-details">
-              <strong>Office #4, 1st Floor, Pak Plaza</strong>
-              <span>Main PWD Double Road, Block D, Islamabad</span>
+              <strong>OFFICE 4 1st Floor Pak Plaza 
+</strong>
+              <span>Pwd Main Road Islamabad</span>
             </div>
           </div>
           <div className="contact-item">
             <FaPhone className="contact-icon" />
             <div className="contact-details">
-              <strong>Phone: 0092 341 13 18 185</strong>
+              <strong>Phone: +92 325 840096
+</strong>
             </div>
           </div>
           <div className="contact-item">
             <FaEnvelope className="contact-icon" />
             <div className="contact-details">
-              <strong>Email: Dillangzoacademy@gmail.com</strong>
+              <strong>Email: dillanzo786@gmail.com</strong>
             </div>
           </div>
         </div>
